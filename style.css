@@ -136,7 +136,7 @@ background:#111;
 color:white;
 }
 
-@media (max-width:768px){
+/* @media (max-width:768px){
 
 nav a{
 display:block;
@@ -158,8 +158,12 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
-
+.contact-wrapper {
+  grid-template-columns: 1fr; 
+  gap: 30px;
 }
+
+}  */
 
 .dark{
 background:#111;
@@ -393,6 +397,8 @@ font-size:22px;
 }
 
 .certificate-card span{
+flex:1;
+word-break: break-word;
 font-weight:500;
 }
 
@@ -455,7 +461,7 @@ margin-top:15px;
 padding:14px;
 border:none;
 border-radius:10px;
-background:#dcdcdc;
+background:#3b82f6;
 font-weight:600;
 cursor:pointer;
 transition:0.3s;
@@ -474,16 +480,43 @@ font-weight:500;
 .dark .contact-text { color: #ccc; }
 .dark .contact-info h4 { color: #fff; }
    
-@media (max-width:768px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr; /* Stack them on top of each other */
-        gap: 30px;
-    }
-}
+
 
 .dark .contact-form input, 
 .dark .contact-form textarea {
     background: #222;
     color: white;
     border: 1px solid #444;
+}
+
+@media (max-width:768px) {
+    nav {
+        flex-direction: row; /* Keep links side-by-side or wrap them */
+        flex-wrap: wrap;
+        width: 95%;
+    }
+
+    nav a {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Fixes the squashed contact form */
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr; /* Fixes certificate layout on small screens */
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .footer {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+    }
+
 }

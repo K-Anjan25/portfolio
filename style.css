@@ -471,8 +471,19 @@ color:green;
 font-weight:500;
 }
 
-input,textarea{
-  width:100%;
-  max-width: 100%;
-  box-sizing: border-box;
+.dark .contact-text { color: #ccc; }
+.dark .contact-info h4 { color: #fff; }
+   
+@media (max-width:768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stack them on top of each other */
+        gap: 30px;
+    }
+}
+
+.dark .contact-form input, 
+.dark .contact-form textarea {
+    background: #222;
+    color: white;
+    border: 1px solid #444;
 }

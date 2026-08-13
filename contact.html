@@ -3,122 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anjan Kumar | Portfolio</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-rel="stylesheet">
+<meta name="description" content="Get in touch with Kyama Anjan Kumar.">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kyama Anjan Kumar | Portfolio">
+<meta property="og:title" content="Contact | Kyama Anjan Kumar">
+<meta property="og:description" content="Get in touch with Kyama Anjan Kumar about roles, projects and collaborations.">
+<title>Contact | Anjan Kumar</title>
+<link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="hero">
-<h1>Kyama Anjan Kumar</h1>
-<p>Frontend Developer | Java | Spring Boot</p>
 
-<div class="hero-buttons">
-<button onclick="toggleMode()" class="btn dark-btn">🌙 Dark Mode</button>
+<body class="dark">
 
-<a href="#projects" class="btn">View Projects</a>
-<a href="https://github.com/K-Anjan25" class="btn">GitHub</a>
-</div>
+<div class="bg-aurora" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
 
-</header>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Anjan<span>.</span></a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="index.html#about">About</a>
-<a href="index.html#projects">Projects</a>
-<a href="index.html#certificates">Certificates</a>
-<a href="contact.html">Contact</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><span class="num">00.</span>Home</a></li>
+    <li><a href="index.html#about"><span class="num">01.</span>About</a></li>
+    <li><a href="index.html#projects"><span class="num">02.</span>Projects</a></li>
+    <li><a href="index.html#certificates"><span class="num">03.</span>Certificates</a></li>
+    <li><a href="contact.html"><span class="num">04.</span>Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="icon-btn theme-toggle" onclick="toggleMode()" id="themeToggle" aria-label="Toggle theme" title="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+    <button class="icon-btn hamburger" onclick="toggleMenu()" aria-label="Menu" title="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
 </nav>
 
-<section id="contact">
+<aside class="rail rail-left">
+  <a href="https://github.com/K-Anjan25" data-link="github" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+  <a href="https://linkedin.com" data-link="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+  <a href="https://instagram.com" data-link="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="mailto:kyamaanjan2@gmail.com" data-link="email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  <span class="rail-line" aria-hidden="true"></span>
+</aside>
 
-<h2>Contact</h2>
+<aside class="rail rail-right">
+  <a href="mailto:kyamaanjan2@gmail.com" data-link="email" class="rail-mail">kyamaanjan2@gmail.com</a>
+  <span class="rail-line" aria-hidden="true"></span>
+</aside>
 
-<div class="contact-wrapper">
+<main id="dynamic-content">
+<div id="contact-page-content">
+  <section class="contact-shell">
+    <h1 class="section-title">Get In Touch<span style="color: var(--accent);">.</span></h1>
+    <p>
+      I'm currently open to internships, full-time roles, and interesting collaborations.
+      My inbox is always open — whether you have a question or just want to say hi, I'll try
+      my best to get back to you.
+    </p>
 
-<!-- Left Side -->
-<div class="contact-info">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3><i class="fa-solid fa-user"></i> Let's connect</h3>
 
-<p class="contact-text">
-Let's connect to discuss new opportunities or creative ideas.
-Feel free to get in touch.
-</p>
+        <div class="contact-line">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <small>Email</small>
+            <a href="mailto:kyamaanjan2@gmail.com">kyamaanjan2@gmail.com</a>
+          </div>
+        </div>
 
-<h4>E-Mail:</h4>
-<p>kyamaanjan2@gmail.com</p>
+        <div class="contact-line">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <small>Phone</small>
+            <p>+91 90590 70662</p>
+          </div>
+        </div>
 
-<h4>Phone No.:</h4>
-<p>+91 9059070662</p>
+        <div class="contact-line">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <small>Based in</small>
+            <p>India · Open to remote</p>
+          </div>
+        </div>
 
-<h4>Connect with me:</h4>
+        <div class="contact-line">
+          <i class="fa-solid fa-share-nodes"></i>
+          <div>
+            <small>Socials</small>
+            <div class="social-icons">
+              <a href="https://github.com/K-Anjan25" data-link="github" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com" data-link="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://instagram.com" data-link="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div class="social-icons">
-<a href="https://github.com/K-Anjan25" target="_blank"><i class="fab fa-github"></i></a>
-<a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="mailto:kyamaanjan2@gmail.com"><i class="fas fa-envelope"></i></a>
+      <div class="contact-card contact-form">
+        <h3><i class="fa-solid fa-paper-plane"></i> Send a message</h3>
+        <form id="contactForm">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input type="text" id="f-name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Your email</label>
+            <input type="email" id="f-email" name="email" placeholder="Enter your e-mail" required>
+          </div>
+          <div class="field">
+            <label for="f-message">Your message</label>
+            <textarea rows="5" id="f-message" name="message" placeholder="Tell me about your project or opportunity" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid">Send message <i class="fa-solid fa-paper-plane"></i></button>
+          <p id="successMessage" class="success-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
 </div>
-
-</div>
-
-
-<!-- Right Side -->
-<div class="contact-form">
-
-<form>
-
-<label>Your Name</label>
-<input type="text" placeholder="Enter your name" required>
-
-<label>Your Email</label>
-<input type="email" placeholder="Enter your e-mail" required>
-
-<label>Your Message</label>
-<textarea rows="6" placeholder="Enter your message"></textarea>
-
-<button type="submit">Submit</button>
-
-<p id="successMessage" class="success-msg"></p>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
+</main>
 
 <footer class="footer">
-<div class="footer-left">
-<strong>Anjan Kumar</strong>
-</div>
-
-<div class="footer-center">
-© 2026 Anjan Kumar. All rights reserved.
-</div>
-
-<div class="footer-right">
-
-<a href="https://linkedin.com" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
-
-<a href="https://github.com/K-Anjan25" target="_blank">
-<i class="fab fa-github"></i> GitHub
-</a>
-
-<a href="blog.html">
-<i class="fas fa-blog"></i> Blogs
-</a>
-
-<a href="contact.html">
-<i class="fas fa-envelope"></i> Contact Us
-</a>
-
-</div>
+  <strong>Kyama Anjan Kumar</strong>
+  <span>© 2026 Anjan Kumar. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="https://linkedin.com" data-link="linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+    <a href="https://github.com/K-Anjan25" data-link="github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+    <a href="index.html#home"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
+</body>
 </html>

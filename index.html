@@ -3,152 +3,298 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anjan Kumar | Portfolio</title>
+<meta name="description" content="Kyama Anjan Kumar — Full-stack developer building scalable applications with Java, Spring Boot, React and Machine Learning.">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kyama Anjan Kumar | Portfolio">
+<meta property="og:title" content="Kyama Anjan Kumar | Full-Stack Developer">
+<meta property="og:description" content="Full-stack developer building scalable applications with Java, Spring Boot, React and Machine Learning.">
+<!-- TODO: replace with your deployed URL + real OG image (1200x630) -->
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://example.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kyama Anjan Kumar | Full-Stack Developer">
+<meta name="twitter:description" content="Full-stack developer building scalable applications with Java, Spring Boot, React and Machine Learning.">
+<title>Kyama Anjan Kumar | Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dark">
 
-<header class="hero">
-<h1>Kyama Anjan Kumar</h1>
-<p>Frontend Developer | Java | Spring Boot</p>
+<div class="bg-aurora" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
 
-<div class="hero-buttons">
-<button onclick="toggleMode()" class="btn dark-btn">🌙 Dark Mode</button>
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Anjan<span>.</span></a>
 
-<a href="#projects" class="btn">View Projects</a>
-<a href="https://github.com/K-Anjan25" class="btn">GitHub</a>
-</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" id="nav-home"><span class="num">00.</span>Home</a></li>
+    <li><a href="index.html#about"><span class="num">01.</span>About</a></li>
+    <li><a href="index.html#projects"><span class="num">02.</span>Projects</a></li>
+    <li><a href="index.html#certificates"><span class="num">03.</span>Certificates</a></li>
+    <li><a href="contact.html"><span class="num">04.</span>Contact</a></li>
+  </ul>
 
-</header>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#certificates">Certificates</a>
-<a href="contact.html">Contact</a>
+  <div class="nav-actions">
+    <button class="icon-btn theme-toggle" onclick="toggleMode()" id="themeToggle" aria-label="Toggle theme" title="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+    <button class="icon-btn hamburger" onclick="toggleMenu()" aria-label="Menu" title="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
 </nav>
 
-<section id="about" class="reveal">
-<h2>About Me</h2>
-<p>I am a frontend developer interested in building scalable applications using Java, Spring Boot, and Machine Learning.</p>
-<h3>Skills</h3>
-<div class="skills">
-<span>Java</span>
-<span>Spring Boot</span>
-<span>Python</span>
-<span>React JS</span>
-<span>Tailwind CSS</span>
-<span>SQL</span>
-</div>
+<!-- ============ SOCIAL RAIL ============ -->
+<aside class="rail rail-left">
+  <a href="https://github.com/K-Anjan25" data-link="github" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+  <a href="https://linkedin.com" data-link="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+  <a href="https://instagram.com" data-link="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="mailto:kyamaanjan2@gmail.com" data-link="email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  <span class="rail-line" aria-hidden="true"></span>
+</aside>
 
+<!-- ============ EMAIL RAIL ============ -->
+<aside class="rail rail-right">
+  <a href="mailto:kyamaanjan2@gmail.com" data-link="email" class="rail-mail">kyamaanjan2@gmail.com</a>
+  <span class="rail-line" aria-hidden="true"></span>
+</aside>
+
+<!-- ============ DYNAMIC CONTENT ============ -->
+<main id="dynamic-content">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <p class="hero-intro">Hi there, my name is</p>
+  <h1 class="hero-name">Kyama Anjan Kumar.</h1>
+  <h2 class="hero-role"><span id="typing-text"></span><span class="typing-cursor"></span></h2>
+  <p class="hero-desc">
+    I'm a full-stack developer building <strong>scalable, secure applications</strong> with
+    Java, Spring Boot &amp; React — and an ML enthusiast who turns suspicious activity into
+    actionable insights. Currently focused on <span class="accent-word">backend architecture</span>.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="index.html#projects" class="btn btn-solid">View Projects <i class="fa-solid fa-arrow-down"></i></a>
+    <a href="https://github.com/K-Anjan25" target="_blank" rel="noopener" class="btn"><i class="fa-brands fa-github"></i> GitHub</a>
+    <a href="contact.html" class="btn">Get in touch</a>
+  </div>
+
+  <div class="hero-status"><span class="dot" aria-hidden="true"></span> Open to internships &amp; full-time roles</div>
 </section>
 
-<section id="projects" class="reveal">
-<h2>Projects</h2>
-<div class="project">
-<img src="public/Cybersecurity.png" alt="AI Cybersecurity Threat Detector">
-<h3>AI Cybersecurity Threat Detector</h3>
-<p>Machine learning system that detects suspicious login activity using Isolation Forest.</p>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="block reveal">
+  <div class="section-head">
+    <h2 class="section-title"><span class="num">01.</span>About</h2>
+    <span class="section-line" aria-hidden="true"></span>
+  </div>
 
-<p><strong>Tech:</strong> Python, React, Isolation Forest, Scikit-learn</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I'm a developer who likes building things that <strong>actually work</strong>. My core stack
+        is Java and Spring Boot on the backend, React + Tailwind on the frontend, and Python where the
+        problem needs a little intelligence — from ML-powered threat detection to clean RESTful APIs.
+      </p>
+      <p>
+        I care about the details: service isolation, stateless auth, healthy data models, and interfaces
+        that don't get in the way. Every project below was built end-to-end — designed, coded, and pushed
+        to production-grade architecture.
+      </p>
 
-<a href="https://github.com/K-Anjan25/AI-Enhanced-Cybersecurity-Threat-Detector" class="btn">View Code</a>
-</div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Projects shipped</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Core technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Curiosity</div>
+        </div>
+      </div>
+    </div>
 
-<div class="project">
-<img src="public/Ecommerce.png" alt="Ecommerce Microservices">
-<h3>Ecommerce Microservices</h3>
-<p>Spring Boot microservices architecture with JWT authentication.</p>
-
-<p><strong>Tech:</strong> Java, Spring Boot, PostgreSQL</p>
-
-<a href="https://github.com/K-Anjan25/ecommerce-microservices" class="btn">View Code</a>
-</div>
+    <div class="skill-card">
+      <h3><i class="fa-solid fa-layer-group"></i> Tech Stack</h3>
+      <div class="skills">
+        <span class="skill-badge" data-desc="Advanced. Core Java, OOP architecture, Multithreading, Collection Frameworks."><i class="devicon-java-plain colored"></i> Java</span>
+        <span class="skill-badge" data-desc="Intermediate. RESTful API design, Microservices architecture, Spring Security, JWT."><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+        <span class="skill-badge" data-desc="Advanced. Core scripting, Pandas/NumPy workflows, Scikit-learn modelling."><i class="devicon-python-plain colored"></i> Python</span>
+        <span class="skill-badge" data-desc="Intermediate. Component lifecycle, state management, interactive hooks."><i class="devicon-react-original colored"></i> React JS</span>
+        <span class="skill-badge" data-desc="Advanced. Utility-first responsive styling, arbitrary-values, layout constraints."><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+        <span class="skill-badge" data-desc="Intermediate. Relational normalization, complex subqueries, transactional ACID handling."><i class="devicon-mysql-plain colored"></i> SQL</span>
+        <span class="skill-badge" data-desc="Working knowledge. Containerised deployments, multi-stage builds, compose orchestration."><i class="devicon-docker-plain colored"></i> Docker</span>
+      </div>
+      <div class="skill-detail-box" id="skillDetailBox">
+        <i class="fa-solid fa-circle-info"></i>
+        <span id="skillDetailText">Hover a skill badge to inspect technical specifics.</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="certificates" class="reveal">
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="block reveal">
+  <div class="section-head">
+    <h2 class="section-title"><span class="num">02.</span>Projects</h2>
+    <span class="section-line" aria-hidden="true"></span>
+  </div>
 
-<h2>Certificates</h2>
+  <div class="projects-grid">
 
-<div class="certificate-grid">
+    <!-- Project 1 -->
+    <article class="project">
+      <div class="project-thumb">
+        <img src="public/Cybersecurity.png" alt="AI Cybersecurity Threat Detector dashboard">
+      </div>
+      <div class="project-tags">
+        <span>Python</span><span>Scikit-learn</span><span>React</span><span>Isolation Forest</span>
+      </div>
+      <h3>AI Cybersecurity Threat Detector</h3>
+      <p class="project-desc">
+        ML system that detects suspicious login activity in real time using Isolation Forest,
+        surfacing simulated anomaly flags through an interactive threshold dashboard.
+      </p>
 
-<a href="YOUR_DRIVE_LINK" target="_blank" class="certificate-card">
-<i class="devicon-react-original colored"></i>
-<span>React Certificate</span>
-</a>
+      <div class="widget">
+        <h4><i class="fa-solid fa-chart-line"></i> Model Metrics — try the slider</h4>
+        <div class="metric-row">
+          <span>Contamination threshold</span>
+          <strong id="threshold-val">0.05</strong>
+        </div>
+        <input type="range" min="0.01" max="0.15" step="0.01" value="0.05" id="thresholdSlider" class="dashboard-slider" aria-label="Contamination threshold">
+        <div class="metric-row">
+          <span>Simulated anomaly alerts</span>
+          <strong id="alert-count" style="color: #f87171;">14 flags</strong>
+        </div>
+      </div>
 
-<a href="YOUR_DRIVE_LINK" target="_blank" class="certificate-card">
-<i class="material-icons">web</i>
-<!-- <i class="devicon-figma-plain colored"></i> -->
-<!-- devicon-mysql-plain colored -->
-<span>UI/UX Design Specialization</span>
-</a>
+      <details class="code-accordion">
+        <summary><i class="fa-solid fa-code"></i> View core ML implementation</summary>
+        <div class="code-wrapper">
+<pre><code>model = IsolationForest(contamination=0.05, random_state=42)
+model.fit(X_train_scaled)
+predictions = model.predict(X_test_scaled)</code></pre>
+        </div>
+      </details>
 
-<a href="YOUR_DRIVE_LINK" target="_blank" class="certificate-card">
-<i class="material-icons">desktop_windows</i>
-<!-- style="color: #444;" -->
-<!-- devicon-html5-plain colored -->
-<span>Software Engineering Job Simulation</span>
-</a>
+      <div class="project-links">
+        <a href="https://github.com/K-Anjan25/AI-Enhanced-Cybersecurity-Threat-Detector" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source</a>
+      </div>
+    </article>
 
-<a href="YOUR_DRIVE_LINK" target="_blank" class="certificate-card">
-<i class="devicon-java-plain colored"></i>
-<span>Java Certificate</span>
-</a>
+    <!-- Project 2 -->
+    <article class="project">
+      <div class="project-thumb">
+        <img src="public/Ecommerce.png" alt="Ecommerce microservices architecture">
+      </div>
+      <div class="project-tags">
+        <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span>
+      </div>
+      <h3>Ecommerce Microservices</h3>
+      <p class="project-desc">
+        Scalable e-commerce backend split into isolated services behind an API gateway, secured
+        with stateless JWT auth and backed by PostgreSQL.
+      </p>
 
-<a href="YOUR_DRIVE_LINK" target="_blank" class="certificate-card">
-<!-- <i class="devicon-python-plain colored"></i> -->
-<i class="material-icons">auto_awesome</i>
-<span>AI Certificate</span>
-</a>
+      <div class="widget">
+        <h4><i class="fa-solid fa-diagram-project"></i> System topology — tap a node</h4>
+        <div class="blueprint-nodes">
+          <div class="node active-node" data-arch="gateway">API Gateway</div>
+          <div class="node" data-arch="auth">Auth · JWT</div>
+          <div class="node" data-arch="product">Products</div>
+        </div>
+        <div class="blueprint-details" id="blueprintDetails">
+          <strong>Route handling:</strong> ingress traffic management, rate-limiting, and microservice request routing via Spring Cloud Gateway.
+        </div>
+      </div>
 
-<a href="YOUR_DRIVE_LINK" target="_blank" class="certificate-card">
-<i class="devicon-c-plain colored"></i>
-<span>C Language</span>
-</a>
+      <details class="code-accordion">
+        <summary><i class="fa-solid fa-code"></i> View gateway config</summary>
+        <div class="code-wrapper">
+<pre><code>spring.cloud.gateway.routes:
+  - id: auth-service
+    uri: lb://AUTH-SERVICE
+    predicates: [Path=/auth/**]
+    filters: [StripPrefix=1]</code></pre>
+        </div>
+      </details>
 
-</div>
+      <div class="project-links">
+        <a href="https://github.com/K-Anjan25/ecommerce-microservices" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Source</a>
+      </div>
+    </article>
 
+  </div>
 </section>
 
+<!-- ===== CERTIFICATES ===== -->
+<section id="certificates" class="block reveal">
+  <div class="section-head">
+    <h2 class="section-title"><span class="num">03.</span>Certificates</h2>
+    <span class="section-line" aria-hidden="true"></span>
+  </div>
+
+  <div class="cert-grid">
+    <a href="#" data-link="certs" target="_blank" rel="noopener" class="cert-card">
+      <span class="cert-icon"><i class="devicon-react-original colored"></i></span>
+      <span>React Certificate</span>
+      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
+    </a>
+
+    <a href="#" data-link="certs" target="_blank" rel="noopener" class="cert-card">
+      <span class="cert-icon"><i class="fa-solid fa-pen-ruler"></i></span>
+      <span>UI/UX Design Specialization</span>
+      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
+    </a>
+
+    <a href="#" data-link="certs" target="_blank" rel="noopener" class="cert-card">
+      <span class="cert-icon"><i class="fa-solid fa-briefcase"></i></span>
+      <span>Software Engineering Job Simulation</span>
+      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
+    </a>
+
+    <a href="#" data-link="certs" target="_blank" rel="noopener" class="cert-card">
+      <span class="cert-icon"><i class="devicon-java-plain colored"></i></span>
+      <span>Java Certificate</span>
+      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
+    </a>
+
+    <a href="#" data-link="certs" target="_blank" rel="noopener" class="cert-card">
+      <span class="cert-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+      <span>AI Certificate</span>
+      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
+    </a>
+
+    <a href="#" data-link="certs" target="_blank" rel="noopener" class="cert-card">
+      <span class="cert-icon"><i class="devicon-c-plain colored"></i></span>
+      <span>C Language</span>
+      <i class="fa-solid fa-arrow-up-right-from-square cert-arrow"></i>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-<div class="footer-left">
-<strong>Anjan Kumar</strong>
-</div>
-
-<div class="footer-center">
-© 2026 Anjan Kumar. All rights reserved.
-</div>
-
-<div class="footer-right">
-
-<a href="https://linkedin.com" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
-
-<a href="https://github.com/K-Anjan25" target="_blank">
-<i class="fab fa-github"></i> GitHub
-</a>
-
-<a href="blog.html">
-<i class="fas fa-blog"></i> Blogs
-</a>
-
-<a href="contact.html">
-<i class="fas fa-envelope"></i> Contact Us
-</a>
-
-</div>
+  <strong>Kyama Anjan Kumar</strong>
+  <span>© 2026 Anjan Kumar. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="https://linkedin.com" data-link="linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+    <a href="https://github.com/K-Anjan25" data-link="github" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+    <a href="index.html#home"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
